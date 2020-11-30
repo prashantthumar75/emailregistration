@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Parth Ardeshana - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/portfolio.css">
+</head>
+
+<body>
+    <div class="header" id="home">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#111;">
+            <a class="navbar-brand" href="#"> <img src="/static/image/brand-logo.jpg" style="width: 100px;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto text-center">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#techno">Tech</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+                <a id="resume-btn" role="button" href="#contact" class="my-btn btn btn-outline-light"> HIRE NOW</a>
+            </div>
+        </nav>
+        <div class="title">
+            <h2>Hello,</h2>
+            <h2> I am<span> Parth Ardeshana</span> </h2>
+            <h2>UX/UI Designer & </h2>
+            <h2> Front end Developer</h2>
+            <h2> Based in India.</h2>
+            <div class="my-4">
+                <a href="#about" class="btn btn-outline-light hire-btn px-5 py-2" role="button"> More Info</a>
+            </div>
+        </div>
+        <div class="coding">
+            <!-- <h1>I Code Cool <span> Websites</span> </h1> -->
+        </div>
+    </div>
+    <div class="container-fluid" id="portfolio">
+        <h3 class="text-center my-4 pt-4" style="color: #ff8b00;">PORTFOLIO</h3>
+        <div class="galary-btn d-flex justify-content-center">
+            <span class="list" data-filter="all">
+                <button class="btn btn-outline-light m-2" style="padding: 7px 52px;">All</button>
+            </span>
+            <span class="list" data-filter="music">
+                <button class="btn btn-outline-light m-2" style="padding: 7px 52px;">Music</button>
+            </span>
+            <span class="list" data-filter="Sports">
+                <button class="btn btn-outline-light m-2" style="padding: 7px 52px;">Sports</button>
+            </span>
+            <span class="list" data-filter="food">
+                <button class="btn btn-outline-light m-2" style="padding: 7px 52px;">Food</button>
+            </span>
+            <span class="list" data-filter="Others">
+                <button class="btn btn-outline-light m-2" style="padding: 7px 52px;">Others</button>
+            </span>
+        </div>
+
+        <div class="imageGalary">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="itemBox Sports"> <img src="/static/galary/A1.png" class="img-thumbnail img-fluid" alt=""> </div>
+                    <div class="itemBox food"> <img src="/static/galary/B1.png" class="img-thumbnail img-fluid" alt=""> </div>
+                    <div class="itemBox Sports"> <img src="/static/galary/c1.png" class="img-thumbnail img-fluid" alt=""> </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="itemBox Others"> <img src="/static/galary/A2.png" class="img-thumbnail img-fluid" alt=""> </div>
+                    <div class="itemBox Others"> <img src="/static/galary/B2.png" class="img-thumbnail img-fluid" alt=""> </div>
+                    <div class="itemBox music"> <img src="/static/galary/c2.png" class="img-thumbnail img-fluid" alt=""> </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="itemBox music"> <img src="/static/galary/A3.png" class="img-thumbnail img-fluid" alt=""> </div>
+                    <div class="itemBox music"> <img src="/static/galary/B3.png" class="img-thumbnail img-fluid" alt=""> </div>
+                    <div class="itemBox Others"> <img src="/static/galary/c3.png" class="img-thumbnail img-fluid" alt=""> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="technology container my-5" id="techno">
+        <h2 class="text-center">Technologies Knowns</h2>
+        <hr>
+        <div class="table-responsive">
+            <ul id="tech-icon" class="text-center my-5">
+                <li> <img class="tech-img" src="/static/image/html.png" alt=""> </li>
+                <li> <img class="tech-img" src="/static/image/css.svg" alt=""> </li>
+                <li> <img class="tech-img js-tech" src="/static/image/js.png" alt=""> </li>
+                <li> <img class="tech-img" src="/static/image/bootstrap.png" alt=""> </li>
+                <li> <img class="tech-img" src="/static/image/C.png" alt=""> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contactPage container my-5" id="contact">
+        <h2 class="text-center">Get In Touch</h2>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6">
+                <form method="post">
+                    {% csrf_token %}
+                    <h3 class="m-4 text-center">Contact Me</h3>
+                    <div class="form-row">
+                        <div class="col">
+                            {{fo}}
+                            <input type="text" class="form-control" name="first_name" placeholder="First name" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="last_name" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1"></label>
+                        <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+                            placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" placeholder="Message" rows="7" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="text-right btn btn-outline-light">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="media">
+                    <div class="contact-info">
+                        <img class="m-1" src="/static/image/location.png" width="35px" style="filter: invert(100%);" alt="">
+                        <p>Bangalore, <br> India </p>
+                    </div>
+                    <div class="contact-info">
+                        <h3> &#9990;</h3>
+                        <p> +91 78178 38490</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>&#9993;</h3>
+                        <p>apwebdesign3@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <hr class="container" id="about">
+        <div class="row">
+            <div class="col-md-5 footer-left p-5">
+                <h5>About</h5>
+                <p class="text-left"> Web Designing is not just my proffesion, It's my passion too. I am always ready to
+                    get
+                    opportunities where i can develop and utilize my skills and contribute my knowledge to the
+                    organization.
+                </p>
+            </div>
+            <div class="col-md-3 p-5 footer-mid">
+                <h5>Features</h5>
+                <ul class="footer-list">
+                    <li> <a href="#home">Home</a> </li>
+                    <li> <a href="#about">About</a> </li>
+                    <li> <a href="#portfolio">Portfolio</a> </li>
+                    <li> <a href="#contact">Contact</a> </li>
+                    <li> <a href="#privacy">Privacy</a> </li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-right p-5">
+                <h5 class="p-2 pl-5">Follow Me</h5>
+                <ul class="social-platforms pl-2 social-1">
+                    <li> <a href="https://github.com/parthardeshana" target="_blank"> <img class="social-icon"
+                                src="/static/icons/GitHub-light.png" alt=""> </a> </li>
+                    <li> <a href="https://www.instagram.com/ap_webdesign/" target="_blank"> <img class="social-icon"
+                                src="/static/icons/insta.png" alt=""> </a> </li>
+                    <li> <a href="https://www.linkedin.com/in/parth-ardeshana-b55262117/" target="_blank"> <img
+                                class="social-icon" src="/static/icons/linkedin.png" alt=""> </a> </li>
+                </ul>
+                <ul class="social-platforms pl-3">
+                    <li> <a href="https://www.fiverr.com/apwebdesign003?up_rollout=true" target="_blank"> <img
+                                class="social-icon" src="/static/icons/fiver.png" style="width: 80px;" alt=""> </a>
+                    </li>
+                    <li> <a href="https://www.upwork.com/freelancers/~0150dc5511b48c8814" target="_blank"> <img
+                                class="social-icon" src="/static/icons/upwork.svg" style="width: 80px;" alt=""> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </footer>
+    <div>
+        <p id="privacy" class="text-center copyrights m-4">Copyright ©2020 All rights reserved | Made Love with &#x2764;
+            Parth
+            Ardeshana</p>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="/static/js/portfolio.js"></script>
+</body>
+
+</html>

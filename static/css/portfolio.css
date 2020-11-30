@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif !important;
+    color: #fff;
+}
+
+body {
+    line-height: 1.7;
+    background: #222;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+/* common  */
+
+.nav-link:hover, .nav-link :active {
+    color: #ff8b00 !important;
+}
+
+.header {
+    background: url(/static/image/background.png);
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.title {
+    opacity: 1;
+    width: 650px;
+    margin-left: 5rem;
+    margin-top: 12em;
+    letter-spacing: 2.5px;
+}
+
+.hire-btn {
+    font-size: 20px;
+}
+
+span {
+    color: #ff8b00;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.nav-link {
+    letter-spacing: 1.5px;
+}
+
+#resume-btn {
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+/* Galary images*/
+
+.my-btn {
+    font-size: 30px;
+}
+
+.imageGalary .itemBox {
+    margin: 25px 10px;
+}
+
+.imageGalary .itemBox img {
+    border-radius: 20px;
+}
+
+/* Technology  */
+
+.technology {
+    padding: 80px 0px;
+}
+
+#tech-icon {
+    list-style: none;
+}
+
+.tech-img {
+    width: 100px;
+}
+
+.js-tech {
+    width: 140px;
+}
+
+#tech-icon li {
+    display: inline;
+    margin: 5px 30px;
+}
+
+/* contact-page */
+
+.contactPage {
+    color: #fff;
+    padding: 5px 20px;
+}
+
+.contactPage input, .contactPage textarea {
+    background-color: #333;
+    padding: 25px 15px;
+    border: none;
+}
+
+.contactPage input:focus, .contactPage textarea:focus {
+    background-color: #333;
+    color: #fff;
+    border: #222 !important;
+}
+
+/* contact -info media  */
+
+.media {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact-info {
+    margin: 30px 1px;
+}
+
+/* Footer Bar  */
+
+footer {
+    color: #fff;
+    padding: 0 30px 10px 30px;
+}
+
+footer h5 {
+    line-height: 3rem;
+}
+
+.footer-mid ul {
+    list-style: none;
+}
+
+.footer-list li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 2rem;
+    transition: .3s all ease;
+    background-color: transparent;
+    opacity: 0.6;
+}
+
+.footer-list li a:hover {
+    opacity: 1;
+}
+
+.navbar-nav {
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.social-icon {
+    width: 30px;
+    padding: 6px;
+    opacity: 1;
+}
+
+.social-platforms {
+    list-style: none;
+}
+
+.social-platforms li {
+    display: inline;
+    margin: 2px 8px;
+}
+
+.social-platforms li a {
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+hr {
+    background-color: #fff;
+    opacity: 0.2;
+}
+
+.copyrights {
+    color: #fff;
+    opacity: 0.6;
+}
+
+/* Responsive starts here  */
+
+/* for laptop screen  */
+
+@media screen and (min-width: 992px) {
+    nav {
+        padding: 10px !important;
+        background: transparent;
+    }
+    .nav-link {
+        margin: 0 15px;
+    }
+    .navbar-brand {
+        margin: 0 50px;
+    }
+    .social-1 {
+        margin-left: 20px;
+    }
+}
+
+/* Tablet Screen  */
+
+/* @media screen and (min-width: 576.6px) and (max-width: 991.98px) { */
+
+@media screen and (max-width: 991.98px) {
+    .nav-link:hover {
+        color: #222 !important;
+        background-color: #fff;
+    }
+    .navbar-brand {
+        margin: 0 auto;
+        padding-left: 62px;
+    }
+    .footer-left, .footer-right, .footer-mid {
+        text-align: center;
+        padding: 0.6rem 3rem !important;
+    }
+    .social-platforms li {
+        margin: 0 4px;
+    }
+    .footer-right h5 {
+        padding-left: 1rem !important;
+    }
+    .imageGalary .itemBox {
+        margin: 10px 5px;
+    }
+    .galary-btn {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .my-btn {
+        display: block;
+    }
+}
+
+/* mobile mode 576px */
+@media screen and (max-width: 576px) {
+    .header {
+        background: url(/static/image/bg-mobile.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .nav-link:hover {
+        color: #222 !important;
+        background-color: #fff;
+    }
+    .navbar-brand {
+        margin: 0 auto;
+    }
+    .footer-left, .footer-right, .footer-mid {
+        text-align: center;
+        padding: 0.6rem 3rem !important;
+    }
+    #tech-icon li {
+        display: block;
+        margin: 5px 30px;
+    }
+    .title {
+        opacity: 1;
+        width: 253px;
+        letter-spacing: 2.5px;
+        padding: 5px;
+        margin-left: 99px;
+        margin-top: 18rem;
+    }
+    .title h2 {
+        font-size: 20px !important;
+        display: inline;
+    }
+    .hire-btn {
+        padding: 5px 25px;
+        font-size: 18px;
+    }
+    .galary-btn {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
